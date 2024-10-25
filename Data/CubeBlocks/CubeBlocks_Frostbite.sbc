@@ -1,0 +1,53 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+    <CubeBlocks>
+
+        <Definition xsi:type="MyObjectBuilder_RadioAntennaDefinition">
+            <Id>
+                <TypeId>RadioAntenna</TypeId>
+                <SubtypeId>LargeBlockGalacticRadioAntennaDish</SubtypeId>
+            </Id>
+            <DisplayName>{LOC:DisplayName_Block_Galactic_AntennaDish}</DisplayName>
+            <Icon>Textures\GUI\Icons\Cubes\AntennaDish.dds</Icon>
+            <Description>Description_AntennaDish</Description>
+            <CubeSize>Large</CubeSize>
+            <BlockTopology>TriangleMesh</BlockTopology>
+            <Size x="5" y="3" z="5" />
+            <ModelOffset x="0" y="0" z="0" />
+            <Model>Models\Cubes\Large\AntennaDish.mwm</Model>
+            <Components>
+                <Component Subtype="Construction" Count="10" />
+                <Component Subtype="Girder" Count="120" />
+                <Component Subtype="SteelPlate" Count="60" />
+                <Component Subtype="Construction" Count="30" />
+                <Component Subtype="Computer" Count="8" />
+                <Component Subtype="RadioCommunication" Count="40" />
+                <Component Subtype="SteelPlate" Count="20" />
+            </Components>
+            <CriticalComponent Subtype="RadioCommunication" Index="0" />
+            <MountPoints>
+                <MountPoint Side="Bottom" StartX="2" StartY="2" EndX="3" EndY="3" />
+            </MountPoints>
+            <BuildProgressModels>
+                <Model BuildPercentUpperBound="0.33" File="Models\Cubes\Large\AntennaDishConstruction_1.mwm" />
+                <Model BuildPercentUpperBound="0.66" File="Models\Cubes\Large\AntennaDishConstruction_2.mwm" />
+                <Model BuildPercentUpperBound="1.00" File="Models\Cubes\Large\AntennaDishConstruction_3.mwm" />
+            </BuildProgressModels>
+            <BlockPairName>GalacticAntennaDish</BlockPairName>
+            <EdgeType>Light</EdgeType>
+            <ResourceSinkGroup>Utility</ResourceSinkGroup>
+            <BuildTimeSeconds>60</BuildTimeSeconds>
+            <MirroringY>Z</MirroringY>
+            <MirroringZ>Y</MirroringZ>
+            <DamageEffectName>Damage_HeavyMech_Damaged</DamageEffectName>
+            <DamagedSound>ParticleHeavyMech</DamagedSound>
+            <DestroyEffect>BlockDestroyedExplosion_Large</DestroyEffect>
+            <DestroySound>WepSmallWarheadExpl</DestroySound>
+            <PCU>100</PCU>
+            <IsAirTight>false</IsAirTight>
+            <DLC>Frostbite</DLC>
+            <MaxBroadcastRadius>150000</MaxBroadcastRadius>
+        </Definition>
+
+    </CubeBlocks> 
+</Definitions>

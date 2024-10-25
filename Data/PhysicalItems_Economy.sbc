@@ -1,0 +1,63 @@
+<?xml version="1.0"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+    <PhysicalItems>
+        <PhysicalItem xsi:type="MyObjectBuilder_PhysicalItemDefinition">
+            <Id>
+                <TypeId>PhysicalObject</TypeId>
+                <SubtypeId>SpaceCredit</SubtypeId>
+            </Id>
+            <DisplayName>Galactic Credits</DisplayName>
+            <Description>Description_SpaceCredit</Description>
+            <Icon>Textures\GUI\Icons\Items\SpaceCredit.dds</Icon>
+            <Size>
+                <X>0.001</X>
+                <Y>0.001</Y>
+                <Z>0.001</Z>
+            </Size>
+            <Mass>0.001</Mass>
+            <Volume>0.001</Volume>
+            <MaxStackAmount>1000000</MaxStackAmount>
+            <Model>Models\Components\SpaceCredit.mwm</Model>
+            <PhysicalMaterial>Metal</PhysicalMaterial>
+        </PhysicalItem>
+
+        <PhysicalItem xsi:type="MyObjectBuilder_PhysicalItemDefinition">
+            <Id>
+                <TypeId>PhysicalObject</TypeId>
+                <SubtypeId>GalacticCredit_Democratica</SubtypeId>
+            </Id>
+            <DisplayName>Galactic Credit Blue</DisplayName>
+            <Icon>Textures\GUI\Icons\Items\SpaceCredit.dds</Icon>
+            <Model>Models\Components\SpaceCredit.mwm</Model>
+            <Mass>0.01</Mass>
+            <Volume>0.001</Volume>
+            <MaxStackAmount>100000</MaxStackAmount>
+        </PhysicalItem>
+        
+        <PhysicalItem xsi:type="MyObjectBuilder_PhysicalItemDefinition">
+            <Id>
+                <TypeId>PhysicalObject</TypeId>
+                <SubtypeId>GalacticCredit_Militar</SubtypeId>
+            </Id>
+            <DisplayName>Galactic Credit Red</DisplayName>
+            <Icon>Textures\GUI\Icons\Items\SpaceCredit.dds</Icon>
+            <Model>Models\Components\SpaceCredit.mwm</Model>
+            <Mass>0.01</Mass>
+            <Volume>0.001</Volume>
+            <MaxStackAmount>100000</MaxStackAmount>
+        </PhysicalItem>
+
+        <PhysicalItem xsi:type="MyObjectBuilder_PhysicalItemDefinition">
+            <Id>
+                <TypeId>PhysicalObject</TypeId>
+                <SubtypeId>GalacticCredit_Comercial</SubtypeId>
+            </Id>
+            <DisplayName>Galactic Credit Green</DisplayName>
+            <Icon>Textures\GUI\Icons\Items\SpaceCredit.dds</Icon>
+            <Model>Models\Components\SpaceCredit.mwm</Model>
+            <Mass>0.01</Mass>
+            <Volume>0.001</Volume>
+            <MaxStackAmount>100000</MaxStackAmount>
+        </PhysicalItem>
+    </PhysicalItems>
+</Definitions>

@@ -1,0 +1,152 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+    <EntityComponents>
+        <EntityComponent xsi:type="MyObjectBuilder_TargetFocusComponentDefinition">
+            <Id>
+                <TypeId>TargetFocusComponent</TypeId>
+                <SubtypeId>Character</SubtypeId>
+            </Id>
+            <FocusSearchMaxDistance>5000</FocusSearchMaxDistance>
+            <AngularToleranceFromCrosshair>5</AngularToleranceFromCrosshair>
+        </EntityComponent>
+
+        <EntityComponent xsi:type="MyObjectBuilder_SearchEnemyComponentDefinition">
+            <Id>
+                <TypeId>SearchEnemyComponent</TypeId>
+                <SubtypeId>DefaultEnemySearch</SubtypeId>
+            </Id>
+            <SearchRadius>5000</SearchRadius>
+        </EntityComponent>
+
+        <EntityComponent xsi:type="MyObjectBuilder_EventDistanceToLockedTargetDefinition">
+            <Id>
+                <TypeId>EventDistanceToLockedTarget</TypeId>
+                <Subtypeid>EventControllerBlockComponent</Subtypeid>
+            </Id>
+            <UniqueSelectionId>22</UniqueSelectionId>
+            <MaxDistance>5000</MaxDistance>
+            <DefaultDistance>5000</DefaultDistance>
+        </EntityComponent>
+
+        <EntityComponent xsi:type="MyObjectBuilder_TargetLockingComponentDefinition">
+            <Id>
+                <TypeId>TargetLockingComponent</TypeId>
+                <SubtypeId>Character</SubtypeId>
+            </Id>
+            <LockingModifierSmallGrid>2</LockingModifierSmallGrid>
+            <LockingModifierLargeGrid>1</LockingModifierLargeGrid>
+            <LockingTimeMin>1</LockingTimeMin>
+            <LockingTimeMax>20</LockingTimeMax>
+            <LockingModifierDistance>10</LockingModifierDistance>
+            <LockingModifierCharacter>2</LockingModifierCharacter>
+            <LockingTimeMinCharacter>1</LockingTimeMinCharacter>
+            <LockingTimeMaxCharacter>20</LockingTimeMaxCharacter>
+            <LockingModifierDistanceCharacter>10</LockingModifierDistanceCharacter>
+        </EntityComponent>
+
+        <EntityComponent xsi:type="MyObjectBuilder_TargetLockingBlockComponentDefinition">
+            <Id>
+                <TypeId>TargetLockingBlockComponent</TypeId>
+                <SubtypeId>AIBlock</SubtypeId>
+            </Id>
+            <LockingModifierSmallGrid>2</LockingModifierSmallGrid>
+            <LockingModifierLargeGrid>1</LockingModifierLargeGrid>
+            <LockingTimeMin>1</LockingTimeMin>
+            <LockingTimeMax>20</LockingTimeMax>
+            <LockingModifierDistance>10</LockingModifierDistance>
+            <LockingModifierCharacter>2</LockingModifierCharacter>
+            <LockingTimeMinCharacter>1</LockingTimeMinCharacter>
+            <LockingTimeMaxCharacter>20</LockingTimeMaxCharacter>
+            <LockingModifierDistanceCharacter>10</LockingModifierDistanceCharacter>
+        </EntityComponent>
+
+        <EntityComponent xsi:type="MyObjectBuilder_AutopilotComponentDefinition">
+            <Id>
+                <TypeId>AutopilotComponent</TypeId>
+                <SubtypeId>SmallFlightMovement</SubtypeId>
+            </Id>
+            <MinHeightAlignmentEnabled>true</MinHeightAlignmentEnabled>
+            <CoastingTestEnabled>false</CoastingTestEnabled>
+            <AutopilotSpeedLimit>800</AutopilotSpeedLimit>
+            <!--Distance from direct line between two waypoints, at which will the autopilot try to correct with CourseCorrectionMaxThrust% thrust. Small grid only setting-->
+            <CourseCorrectionMaxDistanceSmallGrid>5</CourseCorrectionMaxDistanceSmallGrid>
+            <!--Distance from direct line between two waypoints, at which will the autopilot try to correct with CourseCorrectionMaxThrust% thrust. Large grid only setting-->
+            <CourseCorrectionMaxDistanceLargeGrid>10</CourseCorrectionMaxDistanceLargeGrid>
+            <!--Max percentage of thrust dedicated to correcting course toward nearest point on direct line between two traveled points-->
+            <CourseCorrectionMaxThrustPercentage>50</CourseCorrectionMaxThrustPercentage>
+            <!--Max angle in radians between vectors 'Grid.Forward' and 'NextWaypoint.Forward' or 'Grid.Position - NextWaypoint.Position' when going toward first waypoint 
+            before starting thrust-->
+            <CourseCorrectionMaxRemainingRotationBeforeThrust>0.5</CourseCorrectionMaxRemainingRotationBeforeThrust>
+            <!--Max angle in radians between vectors 'Grid.Forward' and 'NextWaypoint.Forward' or 'Grid.Position - NextWaypoint.Position' when going toward first waypoint
+            before starting thrust. In Precision mode-->
+            <CourseCorrectionMaxRemainingRotationBeforeThrustInPrecisionMode>0.2</CourseCorrectionMaxRemainingRotationBeforeThrustInPrecisionMode>
+            <!--Distance from direct line between two waypoints (in multiples of gridSize), at which will the autopilot try to correct with
+            CourseCorrectionMaxThrust% thrust in precision mode-->
+            <CourseCorrectionMaxDistanceInPrecisionModeGridSizeMultiple>0.3</CourseCorrectionMaxDistanceInPrecisionModeGridSizeMultiple>
+            <!--How many radians remaining to be considered fully rotated-->
+            <RotationDeadzoneAdaptiveSpeed>0.009</RotationDeadzoneAdaptiveSpeed>
+            <!--How many radians remaining to be considered fully rotated. For adaptive speed waypoints-->
+            <RotationDeadzone>0.03</RotationDeadzone>
+            <!--Minimum rotation speed (vanila was about 0.05)-->
+            <MinRotationSpeed>0.5</MinRotationSpeed>
+            <!--Maximum rotation speed (vanila was about 1.8)-->
+            <MaxRotationSpeed>2</MaxRotationSpeed>
+            <!--Under this value rotation speed will always be MinRotationSpeed (vanila was 0)-->
+            <MinRotationSpeedThresholdRadians>0.2</MinRotationSpeedThresholdRadians>
+            <!--Above this value rotation speed will always be MaxRotationSpeed (vanila was infinite)-->
+            <MaxRotationSpeedTresholdRadians>1</MaxRotationSpeedTresholdRadians>
+            <!--Rotation velocity in precision mode is divided by this value -->
+            <PrecisionModeRotationVelocitySlowFactor>4</PrecisionModeRotationVelocitySlowFactor>
+            <!--Rotation velocity is divided by this value for automatic behavior with acuqired target-->
+            <RotationVelocitySlowFactorAutomaticBehavior>3</RotationVelocitySlowFactorAutomaticBehavior>
+            <!--Treshold under which grids with AutomaticBehavior (like drones) and target,
+            will divide their torque by RotationVelocitySlowFactorAutomaticBehavior-->
+            <RotationVelocitySlowFactorAutomaticBehaviorTreshold>0.1</RotationVelocitySlowFactorAutomaticBehaviorTreshold>
+        </EntityComponent>
+
+        <EntityComponent xsi:type="MyObjectBuilder_AutopilotComponentDefinition">
+            <Id>
+                <TypeId>AutopilotComponent</TypeId>
+                <SubtypeId>LargeFlightMovement</SubtypeId>
+            </Id>
+            <MinHeightAlignmentEnabled>true</MinHeightAlignmentEnabled>
+            <CoastingTestEnabled>false</CoastingTestEnabled>
+            <AutopilotSpeedLimit>500</AutopilotSpeedLimit>
+            <!--Distance from direct line between two waypoints, at which will the autopilot try to correct with CourseCorrectionMaxThrust% thrust. Small grid only setting-->
+            <CourseCorrectionMaxDistanceSmallGrid>5</CourseCorrectionMaxDistanceSmallGrid>
+            <!--Distance from direct line between two waypoints, at which will the autopilot try to correct with CourseCorrectionMaxThrust% thrust. Large grid only setting-->
+            <CourseCorrectionMaxDistanceLargeGrid>10</CourseCorrectionMaxDistanceLargeGrid>
+            <!--Max percentage of thrust dedicated to correcting course toward nearest point on direct line between two traveled points-->
+            <CourseCorrectionMaxThrustPercentage>50</CourseCorrectionMaxThrustPercentage>
+            <!--Max angle in radians between vectors 'Grid.Forward' and 'NextWaypoint.Forward' or 'Grid.Position - NextWaypoint.Position' when going toward first waypoint 
+            before starting thrust-->
+            <CourseCorrectionMaxRemainingRotationBeforeThrust>0.5</CourseCorrectionMaxRemainingRotationBeforeThrust>
+            <!--Max angle in radians between vectors 'Grid.Forward' and 'NextWaypoint.Forward' or 'Grid.Position - NextWaypoint.Position' when going toward first waypoint
+            before starting thrust. In Precision mode-->
+            <CourseCorrectionMaxRemainingRotationBeforeThrustInPrecisionMode>0.2</CourseCorrectionMaxRemainingRotationBeforeThrustInPrecisionMode>
+            <!--Distance from direct line between two waypoints (in multiples of gridSize), at which will the autopilot try to correct with
+            CourseCorrectionMaxThrust% thrust in precision mode-->
+            <CourseCorrectionMaxDistanceInPrecisionModeGridSizeMultiple>0.3</CourseCorrectionMaxDistanceInPrecisionModeGridSizeMultiple>
+            <!--How many radians remaining to be considered fully rotated-->
+            <RotationDeadzoneAdaptiveSpeed>0.009</RotationDeadzoneAdaptiveSpeed>
+            <!--How many radians remaining to be considered fully rotated. For adaptive speed waypoints-->
+            <RotationDeadzone>0.03</RotationDeadzone>
+            <!--Minimum rotation speed (vanila was about 0.05)-->
+            <MinRotationSpeed>0.5</MinRotationSpeed>
+            <!--Maximum rotation speed (vanila was about 1.8)-->
+            <MaxRotationSpeed>2</MaxRotationSpeed>
+            <!--Under this value rotation speed will always be MinRotationSpeed (vanila was 0)-->
+            <MinRotationSpeedThresholdRadians>0.2</MinRotationSpeedThresholdRadians>
+            <!--Above this value rotation speed will always be MaxRotationSpeed (vanila was infinite)-->
+            <MaxRotationSpeedTresholdRadians>1</MaxRotationSpeedTresholdRadians>
+            <!--Rotation velocity in precision mode is divided by this value -->
+            <PrecisionModeRotationVelocitySlowFactor>4</PrecisionModeRotationVelocitySlowFactor>
+            <!--Rotation velocity is divided by this value for automatic behavior with acuqired target-->
+            <RotationVelocitySlowFactorAutomaticBehavior>3</RotationVelocitySlowFactorAutomaticBehavior>
+            <!--Treshold under which grids with AutomaticBehavior (like drones) and target,
+            will divide their torque by RotationVelocitySlowFactorAutomaticBehavior-->
+            <RotationVelocitySlowFactorAutomaticBehaviorTreshold>0.1</RotationVelocitySlowFactorAutomaticBehaviorTreshold>
+        </EntityComponent>
+        
+    </EntityComponents>
+</Definitions>

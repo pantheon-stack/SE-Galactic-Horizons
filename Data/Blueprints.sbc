@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+    <Blueprints>
+		<Blueprint>
+            <Id>
+                <TypeId>BlueprintDefinition</TypeId>
+                <SubtypeId>GHAdminChip</SubtypeId>
+            </Id>
+            <DisplayName>{LOC:DisplayName_Blueprint_Galactic_AdminChip}</DisplayName>
+            <Icon>Textures\GUI\Icons\Items\ZoneChip_Item.dds</Icon>
+            <Prerequisites>
+                <Item Amount="1" TypeId="Component" SubtypeId="GHAdminChip" />
+            </Prerequisites>
+            <Result Amount="1" TypeId="Component" SubtypeId="GHAdminChip" />
+            <BaseProductionTimeInSeconds>99999</BaseProductionTimeInSeconds>
+        </Blueprint>
+    </Blueprints>
+</Definitions>

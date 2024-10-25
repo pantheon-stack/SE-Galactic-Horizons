@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+    <BlockVariantGroups>
+
+        <!-- Communication -->
+
+        <BlockVariantGroup>
+            <Id Type="MyObjectBuilder_BlockVariantGroup" Subtype="GalacticAntennaGroup" />
+            <Icon>Textures\GUI\Icons\Cubes\antenna.dds</Icon>
+            <DisplayName>DisplayName_BlockGroup_Galactic_AntennaGroup</DisplayName>
+            <Description>Description_BlockGroup_AntennaGroup</Description>
+            <Blocks>
+                <Block Type="MyObjectBuilder_RadioAntenna" Subtype="LargeBlockGalacticRadioAntenna" />
+                <Block Type="MyObjectBuilder_RadioAntenna" Subtype="LargeBlockGalacticCompactRadioAntenna" />
+                <Block Type="MyObjectBuilder_RadioAntenna" Subtype="LargeBlockGalacticRadioAntennaDish" />
+                <Block Type="MyObjectBuilder_Beacon" Subtype="LargeBlockGalacticBeacon" />
+                <Block Type="MyObjectBuilder_Beacon" Subtype="LargeBlockGalacticBeaconReskin" />
+                <Block Type="MyObjectBuilder_RadioAntenna" Subtype="SmallBlockGalacticRadioAntenna" />
+                <Block Type="MyObjectBuilder_Beacon" Subtype="SmallBlockGalacticBeacon" />
+                <Block Type="MyObjectBuilder_Beacon" Subtype="SmallBlockGalacticBeaconReskin" />
+                <Block Type="MyObjectBuilder_LaserAntenna" Subtype="LargeBlockLaserAntenna" />
+                <Block Type="MyObjectBuilder_LaserAntenna" Subtype="SmallBlockLaserAntenna" />
+            </Blocks>
+        </BlockVariantGroup>
+
+        <!-- High-Tech -->
+
+        <BlockVariantGroup>
+            <Id Type="MyObjectBuilder_BlockVariantGroup" Subtype="GalacticSpecialGroup" />
+            <Icon>Textures\GUI\Icons\Cubes\JumpDrive.dds</Icon>
+            <DisplayName>DisplayName_Block_Galactic</DisplayName>
+            <Description>Description_Galactic</Description>
+            <Blocks>
+            </Blocks>
+        </BlockVariantGroup>
+    </BlockVariantGroups>
+</Definitions>

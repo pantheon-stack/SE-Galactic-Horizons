@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+   <CubeBlocks>
+      <Definition xsi:type="MyObjectBuilder_TerminalBlockDefinition">
+         <Id>
+            <TypeId>TerminalBlock</TypeId>
+            <SubtypeId>GHRPAdminBlockDefender</SubtypeId>
+         </Id>
+         <DisplayName>{LOC:DisplayName_Block_Galactic_AdminDefender}</DisplayName>
+         <Icon>Textures\GUI\Icons\Cubes\10YearStatue.dds</Icon>
+         <Public>true</Public>
+         <CubeSize>Large</CubeSize>
+         <BlockTopology>TriangleMesh</BlockTopology>
+         <Size x="1" y="2" z="1" />
+         <Center x="0" y="0" z="0" />
+         <ModelOffset x="0" y="0" z="0" />
+         <Model>Models\Cubes\Large\10YearStatue.mwm</Model>
+         <Components>
+            <Component Subtype="GHAdminChip" Count="1" />
+            <Component Subtype="Girder" Count="30" />
+            <Component Subtype="SteelPlate" Count="30" />
+            <Component Subtype="Construction" Count="30" />
+            <Component Subtype="SteelPlate" Count="30" />
+         </Components>
+         <CriticalComponent Subtype="Construction" Index="0" />
+         <MountPoints>
+            <MountPoint Side="Bottom" StartX="0.1" StartY="0.1" EndX="0.9" EndY="0.9" Default="true" />
+         </MountPoints>
+         <BuildProgressModels>
+            <Model BuildPercentUpperBound="0.50" File="Models\Cubes\Large\10YearStatue_Construction_1.mwm" />
+            <Model BuildPercentUpperBound="1.00" File="Models\Cubes\Large\10YearStatue_Construction_2.mwm" />
+         </BuildProgressModels>
+         <MirroringY>Z</MirroringY>
+         <MirroringZ>Y</MirroringZ>
+         <BlockPairName>GalacticSpecials</BlockPairName>
+         <EdgeType>Light</EdgeType>
+         <BuildTimeSeconds>999</BuildTimeSeconds>
+         <PCU>1</PCU>
+         <IsAirTight>false</IsAirTight>
+      </Definition>
+   </CubeBlocks>
+</Definitions>

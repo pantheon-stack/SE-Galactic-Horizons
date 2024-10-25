@@ -1,0 +1,38 @@
+<?xml version="1.0"  encoding="utf-8"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+   <CategoryClasses>
+      
+      <Category xsi:type="MyObjectBuilder_GuiBlockCategoryDefinition">
+         <Id>
+            <TypeId>GuiBlockCategoryDefinition</TypeId>
+            <SubtypeId/>
+         </Id>
+         <DisplayName>{LOC:DisplayName_Block_Galactic_Horizons}</DisplayName>
+         <Name>Section10_Position1_GalacticHorizonsIndustries_Antennas</Name>
+         <ItemIds>
+            <string>TerminalBlock/GHRPAdminBlockDefender</string>
+            <string>RadioAntenna/LargeBlockGalacticRadioAntenna</string>
+            <string>RadioAntenna/SmallBlockGalacticRadioAntenna</string>
+            <string>RadioAntenna/LargeBlockGalacticCompactRadioAntenna</string>
+            <string>RadioAntenna/LargeBlockGalacticRadioAntennaDish</string>
+            <string>Beacon/LargeBlockGalacticBeacon</string>
+            <string>Beacon/SmallBlockGalacticBeacon</string>
+            <string>Beacon/LargeBlockGalacticBeaconReskin</string>
+            <string>Beacon/SmallBlockGalacticBeaconReskin</string>
+         </ItemIds>
+      </Category>
+
+      <Category xsi:type="MyObjectBuilder_GuiBlockCategoryDefinition">
+         <Id>
+            <TypeId>GuiBlockCategoryDefinition</TypeId>
+            <SubtypeId/>
+         </Id>
+         <DisplayName>DisplayName_Category_LargeBlocks</DisplayName>
+         <Name>Section1_Position1_LargeBlocks</Name>
+         <ItemIds>
+            <string>TerminalBlock/GHRPAdminBlockDefender</string>
+         </ItemIds>
+      </Category>
+
+   </CategoryClasses>
+</Definitions>
